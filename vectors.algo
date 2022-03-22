@@ -1,0 +1,55 @@
+//procedure et fonction 
+
+PROCEDURE dot_product(t1,t2:ARRAY_OF FLOAT[3] ,var ps)
+VAR
+ ps:FLOAT:=0;
+ i:INTEGER
+
+BEGIN
+   for i from 0 to t1.length-1 DO
+   ps+=t1[i]*t2[i]
+   
+END
+
+ALGORITHM algorithm_name
+VAR
+   n,i,ps:integer;
+   v1:ARRAY_OF[3]
+   v2:ARRAY_OF[3]
+BEGIN
+   write('enter the number of pairs vectors')
+   read(n)
+ for i from 0 to n DO
+     write('enter the first vector')
+     for i from 0 to n do
+     read (v1[i])
+     end for 
+     write ('enter the secod vector ')
+     for i from 0 to n do
+     read (v2[i])
+     end for
+
+    //procedure methode:  dot_product(v1,v2,ps)
+    ps:=dot_product(v1,v2)
+     if (ps=0)then 
+     write("les vecteur v1 et v2 sont ortogonaux")
+     ELSE 
+     write ("les vecteur v1 et v2 ne sont ortogonaux")
+end if 
+
+en for 
+
+
+END
+// function method
+function dot-product(t1,t2:ARRAY_OF[3]):FLOAT
+var 
+ps:FLOAT:=0;
+i:integer;
+BEGIN
+
+for i from 0 to t1.length-1 do
+ps+=t1[i]*t2[i];
+END_FOR
+return ps;
+END
